@@ -1,134 +1,346 @@
-/* GLOBAL STYLES
+/* Global Styles
 -------------------------------------------------- */
-/* Padding below the footer and lighter body text */
 
 body {
+  color: #333333;
   font-family: sofia-pro-soft, sans-serif;
-  color: #2196F3;
-  background-color: #FFFFFF; 
   text-align: center;
 }
 
-body h1 {
+h1 {
   font-weight: bold;
 }
 
-#header {
-  margin-top: 70px;
-  margin-bottom: 15px;
+/* Customize the Jumbotron
+-------------------------------------------------- */
+
+.jumbotron {
+  align-items: center;
+  background-color: #FFFFFF; 
+  margin: 100px auto 50px auto;
 }
 
-/* CUSTOMIZE THE CAROUSEL
+.first {
+  color: #2196F3
+}
+
+.second {
+  color: #00BCD4
+}
+
+.third {
+  color: #4CAF50
+}
+
+.fourth {
+  color: #8BC34A
+}
+
+.fifth {
+  color: #FFC107
+}
+
+/* Customize the Carousel
 -------------------------------------------------- */
 
 .carousel-caption {
-  height: auto;
-  min-height: 25rem;
+  margin: 1rem auto 1rem auto;
+  padding: 1rem;
 }
 
-.carousel-caption h1 {
-  font-size: 3rem;
-  text-align: center;
+.bd-placeholder-img, rect {
+  height: 100%;
+  width: 100%;
 }
 
-/* Declare heights because of positioning of img element */
-.carousel-item {
-  height: 32rem;
+.signup1 {
+  display: flex;
 }
+
+/* Customize signup.blade
+-------------------------------------------------- */
 
 /* Style the form - display items horizontally */
 .form-inline { 
   display: flex;
-  flex-flow: row wrap;
-  align-items: center;
 }
 
 input[type=email] {
-  margin-right: 1em;
   height: 40px;
+  margin-right: 1rem;
   min-width: 230px;
 }
 
-// Google Identity and Google+ Sign in buttons
-// https://developers.google.com/+/branding-guidelines
+/* Google Identity and Sign in button  */
+/* https://developers.google.com/+/branding-guidelines */
 
 .google-button {
-  height: 40px;
-  border-width: 0;
   background: white;
-  color: #737373;
   border-radius: 5px;
-  white-space: nowrap;
-  box-shadow: 1px 1px 0px 1px rgba(0,0,0,0.05);
-  transition-property: background-color, box-shadow;
-  transition-duration: 150ms;
-  transition-timing-function: ease-in-out;
+  border-width: 0;
+  box-shadow: 1px 1px 0 1px rgb(0,0,0);
+  color: #737373;
+  height: 40px;
+  min-width: 230px;
   padding: 0;
-  
-  &:focus,
-  &:hover {
-    box-shadow: 1px 4px 5px 1px rgba(0,0,0,0.1);
-  }
-  
-  &:active {
-    background-color: #e5e5e5;
-    box-shadow: none;
-    transition-duration: 10ms;
-  }
 }
     
-.google-button__icon {
+.google-button-icon {
   display: inline-block;
-  vertical-align: middle;
-  margin: 8px 0 8px 8px;
-  width: 18px;
   height: 18px;
-  box-sizing: border-box;
+  width: 18px;
 }
 
-
-.google-button__text {
+.google-button-text {
   display: inline-block;
-  vertical-align: middle;
-  padding: 0 24px;
+  font-family: 'Roboto',arial,sans-serif;
   font-size: 14px;
   font-weight: bold;
-  font-family: 'Roboto',arial,sans-serif;
-}
-
-// Boilerplate stuff
-
-body {
-  background-color: #f0f0f0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding-left: 10px; 
 }
 
 button ~ button {
   margin-left: 20px;
 }
 
+/* Customize the Featurettes
+------------------------- */
+
+.divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  letter-spacing: -.05rem;
+  line-height: 1;
+}
+
+.featurette-first {
+  color: #00BCD4;
+}
+
+.featurette-second {
+  color: #FFC107;
+}
+
+.featurette-third {
+  color: #4CAF50;
+}
+
+.feat-img-1-2 {
+  height: 400px;
+  width: 400px;
+}
+
+.feat-img-3 {
+  height: 140px;
+  width: 140px;
+}
+
+/* Customize footer_sign_up
+------------------------- */
+
+.signup2 {
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Customize the Footer
+------------------------- */
+
+
+#UL-1 {
+  display: inline-block;
+  height: 151px;
+  list-style: none outside none;
+  max-width: 180px;
+  min-width: 140px;
+  text-align: left;
+  vertical-align: top;
+}/*#UL-1*/
+
+#LI-0 {
+  color: rgb(139, 139, 148);  
+  font: bold 15px/21.4286px sofia-pro-soft, sans-serif;
+  margin: 2px 0 8px 15px;
+}/*#LI-0*/
+
+
+.A-1 {
+  bottom: 0;
+  color: rgb(139, 139, 148);
+  display: block;
+  font: 15px/24px sofia-pro-soft, sans-serif;
+  left: 0;
+  list-style: none outside none;
+  padding: 0 15px;
+  position: relative;
+  right: 0;
+  text-align: left;
+  top: 0;
+  width: 140px;
+}/*.A-1*/
+
+#company {
+  color: rgb(137, 138, 146);
+  column-rule-color: rgb(137, 138, 146);
+  display: inline-block;
+  font: 13px/18.5714px sofia-pro-soft, sans-serif;
+  width: 183.047px;
+ }/*#company*/
+
+.footer-legal-links li, .footer-legal-links a {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 400;
+  color: #898a92;
+}
+
+.btn-group {
+  display: inline-block;
+}
+
+#localization, .dropdown-item {
+  bottom: 0;
+  color: rgb(137, 138, 146);
+  cursor: pointer;
+  display: block;
+  float: left;
+  left: 0;
+  position: relative;
+  right: 0;
+  top: 0;
+  width: 118.469px;
+  font: 13px/19.5px sofia-pro-soft, sans-serif;
+}/*#localization*/
+
+#flag {
+  width: 24px;
+  height: 16px;
+}
+
+#A-2, #A-3, #A-4 {
+  display: block;
+  float: right;
+  height: 20px;
+  width: 20px;
+  margin: 0 0 0 4px;
+}
+
+#A-2 {
+  background: url(/img/ico_tumblr_20.png);
+}/*#A-2*/
+
+#A-3 {
+  background: url(/img/ico_twitter_20.png);
+}/*#A-3*/
+
+#A-4 {
+  background: url(/img/ico_facebook_20.png);
+}/*#A-4*/
+
+/* Customize Subscription page
+------------------------- */
+
+.page-header {
+  padding-bottom: 9px;
+  margin: 60px 0 20px;
+  border-bottom: 1px solid #eee;
+}
+
+input[type=text], input[type=email], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 35%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div.container {
+  width: 40%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
-@media (min-width: 40em) {
-  /* Bump up size of carousel content */
-  .carousel-caption h2, p {
-    width: 100%;
+@media screen and (min-width: 1201px) {
+  .bd-placeholder-img {
+    height: 23rem;
   }
+}
 
-  .carousel-caption p {
-    margin-bottom: 1.25rem;
-    font-size: 1.25rem;
-    line-height: 1.4;
+
+@media screen and (max-width: 1200px) {
+  .colorful-title, .word, .carousel-heading {
+    font-size: 1.8rem;
   }
+  .bd-placeholder-img {
+    height: 20rem;
+  }
+}
 
+@media screen and (max-width: 992px) {
+  .colorful-title, .word, .carousel-heading {
+    font-size: 1.8rem;
+  }
+  .bd-placeholder-img {
+    height: 22rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .colorful-title, .word, .carousel-heading {
+    font-size: 1.3rem;
+  }
+  .bd-placeholder-img {
+    height: 25rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .colorful-title, .word {
+    font-size: 1.8rem;
+  }
+  .bd-placeholder-img {
+    height: 28rem;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
 }
 
 /* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .form-inline input {
     margin: 10px 0;
   }
@@ -138,3 +350,4 @@ button ~ button {
     align-items: stretch;
   }
 }
+
