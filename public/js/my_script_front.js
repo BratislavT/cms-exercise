@@ -4,7 +4,7 @@ renderForm(frontEndForm);
 
     function renderForm(form) {
 
-        var i, v, lab, x, k;
+        var i, v, lab, x, k, submit;
 
         $.each(form, function (i, v) {
             // console.log(i, v);

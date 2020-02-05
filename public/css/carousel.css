@@ -277,11 +277,13 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
-div.container {
+div.container2 {
   width: 40%;
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 40px;
 }
 
