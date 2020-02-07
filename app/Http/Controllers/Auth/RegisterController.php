@@ -69,7 +69,7 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
-    /*
+    
     public function showRegistrationForm()
     {
         abort(404);
@@ -79,6 +79,6 @@ class RegisterController extends Controller
     {
         abort(404);
     }
-    */
+    
     
 }
