@@ -11,7 +11,7 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-        $users=array("name"=>"Braca","email"=>"uveknobelovac@yahoo.com","password"=>"Braca29x");
+        $users=array("name"=>"Braca","email"=>"uveknobelovac@yahoo.com","password"=>"$2y$10$1J3YqbBBTQWJKxCVNdDmquASG46wMPiB8pDMX1O5n/1XwsST38tWG");
 
         DB::table('users')->insert( $users );
 
