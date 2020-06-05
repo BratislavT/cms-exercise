@@ -30,7 +30,7 @@ class MapController extends AdminController
         $map->lng = $request->lng;
         $lat = $request->lat;
         $map->save();
-
+        
         return redirect()->route('map.index');
     }
 }

@@ -1,4 +1,5 @@
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<!-- jquery is enebled in /var/www/template.com/resources/views/layouts/partials/head.blade.php -->
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
 
 <script>
 // Synchronize words in jumbotron with carousel slides

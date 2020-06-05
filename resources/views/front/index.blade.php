@@ -2,7 +2,7 @@
 @section('content')
 
 <div id="page-wrapper">
-     
+    
     @include('layouts.front.frontPage.jumbotron')
     @include('layouts.front.frontPage.carousel')
     @include('layouts.front.frontPage.featurette')

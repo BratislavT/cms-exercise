@@ -23,6 +23,10 @@ renderForm(formSettings);
             if (form[i].type == "select") {
 
                 x = $("<select>");
+                $(x).attr({
+                    "id" : form[i].type+String(i),
+                    "name" : form[i].name
+                });
                 $("#frm").append(x);
 
                 $.each(form[i].choices, function(k, v) {
@@ -64,7 +68,8 @@ renderForm(formSettings);
                     x = $("<input>");
                     $(x).attr({
                         "type" : form[i].type,
-                        "id" : form[i].type
+                        "name" : form[i].name,
+                        "id"   : form[i].type+String(i)
                     });
                     $("#frm").append(x);
 

@@ -9,7 +9,7 @@
         <!-- /.col-lg-12 -->
     </div>
     <!-- /.row -->
-     
+    @include('layouts.front.subscription.message_subscribed')
     @include('layouts.front.subscription.subscription_form')
 
 </div>

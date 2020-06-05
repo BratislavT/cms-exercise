@@ -34,6 +34,8 @@ Route::group([
 });
 
 Route::resource('/subscription','Front\SubscriptionController');
+Route::any('/check-email','Front\SubscriptionController@checkEmail');
+
 
 Auth::routes();
 

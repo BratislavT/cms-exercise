@@ -17,9 +17,8 @@
 
   </main>
   
-  <footer>
-    @include('layouts.partials.footer')
-  </footer>
+
+  @include('layouts.partials.footer')
   
   @include('layouts.partials.footer-scripts')
 

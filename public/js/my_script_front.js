@@ -2,23 +2,27 @@ var frontEndForm = JSON.parse(document.getElementById("frontEndJson").value);
 
 renderForm(frontEndForm);
 
-    function renderForm(form) {
+function renderForm(form) {
 
-        var i, v, lab, x, k, submit;
+    var i, v, lab, x, k, submit;
 
-        $.each(form, function (i, v) {
-            // console.log(i, v);
+    $.each(form, function (i, v) {
+        // console.log(i, v);
 
-            //kreiranje natpisa iznad polja     
-            if (form[i].type != "hidden") {
-                lab = $("<label>").attr("for", form[i].type+String(i) ).text(form[i].label);
-                $("#frm").append(lab);
-            }
+        //kreiranje natpisa iznad polja     
+        if (form[i].type != "hidden") {
+            lab = $("<label>").attr("for", form[i].name ).text(form[i].label);
+            $("#frm").append(lab);
+        
 
             //kreiranje polja za unos i izbor
             if (form[i].type == "select") {
 
-                x = $("<select>").attr("id", form[i].type+String(i));
+                x = $("<select>");
+                $(x).attr({
+                    "id" : form[i].type+String(i),
+                    "name" : form[i].name
+                });
                 $("#frm").append(x);
 
                 $.each(form[i].choices, function(k, v) {
@@ -51,6 +55,7 @@ renderForm(frontEndForm);
                     $(submit).attr({
                         "type" : "submit",
                         "class" : "btn btn-success",
+                        "name" : form[i].type+String(i),
                         "value" : "SUBMIT"
                     });    
                     $("#frm").append(submit);
@@ -60,11 +65,32 @@ renderForm(frontEndForm);
                     x = $("<input>");
                     $(x).attr({
                         "type" : form[i].type,
-                        "id" : form[i].type+String(i)
+                        "id" : form[i].type+String(i),
+                        "name" : form[i].name
                     });
                     $("#frm").append(x);
 
                 }
             }
-        });	
-    }
+        }    
+    });	
+}
+
+$(function() {
+    $("#frm").validate({
+        rules: {
+            email: {
+                required: true,
+                email: true, 
+                remote: "/check-email"
+            }
+        },
+            messages: {
+                email: {
+                    required: "Email is required",
+                    email: "Email is Invalid",
+                    remote: "Email already exists!"
+            }
+        }
+    });
+});
