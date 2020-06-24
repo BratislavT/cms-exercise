@@ -11,7 +11,7 @@
                     <label class="control-label" for="{{$element->id}}"><span class="star">{{$element->required == "yes" ? "*" : ""}}</span> {{$element->label}}</label>
                     <input id="{{$element->id}}" type="text" class="form-control" name="{{$element->name}}" value="{{$element->value}}" />
                     @foreach ($element->error as $error)
-                    <p class="error" *ngFor="let error of element.error" >{{$error}}</p>
+                    <p class="error">{{$error}}</p>
                     @endforeach
                 </div>
                 
@@ -24,7 +24,7 @@
                         @endforeach
                     </select>
                     @foreach ($element->error as $error)
-                    <p class="error" *ngFor="let error of element.error" >{{$error}}</p>
+                    <p class="error">{{$error}}</p>
                     @endforeach
                 </div>
                 
@@ -33,7 +33,7 @@
                     <input id="{{$element->id}}" class="mr-2" type="checkbox">
                     <a target="_blank" href="{{$element.href}}"><span class="star">{{$element->required == "yes" ? "*" : ""}}</span> {{element.label}}</a>
                     @foreach ($element->error as $error)
-                    <p class="error" *ngFor="let error of element.error" >{{$error}}</p>
+                    <p class="error">{{$error}}</p>
                     @endforeach
                 </div>
                 
@@ -42,7 +42,7 @@
                     <input id="{{$element->id}}" class="mr-2" type="checkbox">
                     <span><span class="star">{{$element->required == "yes" ? "*" : ""}}</span> {{$element->label}} </span>
                     @foreach ($element->error as $error)
-                    <p class="error" *ngFor="let error of element.error" >{{$error}}</p>
+                    <p class="error">{{$error}}</p>
                     @endforeach
                 </div>
             
