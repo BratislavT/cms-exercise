@@ -1,0 +1,103 @@
+[
+    {
+        "id": 1,
+        "label": "Gender",
+        "name": "gender",
+        "type": "select",
+        "options": [
+            "",
+            "male",
+            "female"
+        ],
+        "required": "yes",
+        "sort": 1,
+        "value": "",
+        "error": []
+    },
+    {
+        "id": 2,
+        "label": "First Name",
+        "name": "name",
+        "type": "input",
+        "required": "yes",
+        "sort": 2,
+        "value": "",
+        "error": []
+    },
+    {
+        "id": 3,
+        "label": "Last Name",
+        "name": "name",
+        "type": "input",
+        "required": "yes",
+        "sort": 3,
+        "value": "",
+        "error": []
+    },
+    {
+        "id": 4,
+        "label": "Email",
+        "name": "email",
+        "type": "input",
+        "required": "yes",
+        "unique": "yes",
+        "sort": 4,
+        "value": "",
+        "error": []
+    },
+    {
+        "id": 5,
+        "label": "Country",
+        "name": "country",
+        "type": "select",
+        "options": [
+            "",
+            "Austria",
+            "Germany",
+            "Linchenstein",
+            "Switzerland"
+        ],
+        "required": "yes",
+        "sort": 5,
+        "value": "",
+        "error": []
+    },
+    {
+        "id": 6,
+        "label": "Post Code",
+        "name": "postcode",
+        "type": "input",
+        "required": "yes",
+        "sort": 6,
+        "value": "",
+        "error": []
+    },
+    {
+        "id": 7,
+        "label": "City",
+        "name": "city",
+        "type": "input",
+        "required": "yes",
+        "sort": 7,
+        "value": "",
+        "error": []
+    },
+    {
+        "id": 8,
+        "label": "Address",
+        "name": "address",
+        "type": "input",
+        "required": "yes",
+        "sort": 8,
+        "value": "",
+        "error": []
+    },
+    {
+        "id": 9,
+        "label": "Save",
+        "name": "save",
+        "type": "button",
+        "required": "yes",
+        "sort": 9
+    }
+]

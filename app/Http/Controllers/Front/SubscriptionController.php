@@ -11,9 +11,13 @@ class SubscriptionController extends FrontController
     public function index(){
 
         // Read json.form from storage
-        $frontEndJson = file_get_contents(storage_path('json/frontEndJson.json'));
+        // $frontEndJson = file_get_contents(storage_path('json/frontEndJson.json'));
+        $elementsJson = file_get_contents(storage_path('json/elements.json'));
+        $elementsArray = [ json_decode($elementsJson)];
 
-        return view('front.subscription')->with('frontEndJson', $frontEndJson);
+        //echo "<pre>" . print_r($elementsArray, true) . "</pre>"; die();
+
+        return view('front.subscription')->with('elements', $elementsArray);
     }
 
     public function store(Request $request)
