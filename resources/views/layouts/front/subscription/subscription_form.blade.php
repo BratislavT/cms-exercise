@@ -5,7 +5,7 @@
                 
             {{ csrf_field() }}
 
-            @foreach ($elements[0] as $element)                 
+            @foreach ($elements as $element)                 
                 @if ($element->type == 'input')
                 <div class="form-group">
                     <label class="control-label" for="{{$element->id}}"><span class="star">{{$element->required == "yes" ? "*" : ""}}</span> {{$element->label}}</label>
@@ -48,7 +48,7 @@
             
                 @elseif ($element->type == 'button')
                 <div class="form-group">
-                    <button class="btn btn-dark">{{$element->label}}</button>
+                    <button type="submit" class="btn btn-dark">{{$element->label}}</button>
                 </div>       
                 @endif
             @endforeach

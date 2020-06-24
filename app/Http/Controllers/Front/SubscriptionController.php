@@ -13,7 +13,7 @@ class SubscriptionController extends FrontController
         // Read json.form from storage
         // $frontEndJson = file_get_contents(storage_path('json/frontEndJson.json'));
         $elementsJson = file_get_contents(storage_path('json/elements.json'));
-        $elementsArray = [ json_decode($elementsJson)];
+        $elementsArray = json_decode($elementsJson);
 
         //echo "<pre>" . print_r($elementsArray, true) . "</pre>"; die();
 
