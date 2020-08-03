@@ -4,26 +4,22 @@ namespace App\Http\Controllers\Admin;
 
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
+
+use App\Http\Controllers\Controller;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use Illuminate\Http\Request;
-use App\Admin\Mail;
+use App\Models\Admin\Mail;
 use Auth;
 
 
-class MailController extends AdminController
+class MailController extends Controller
 {
 
     public function index()
     {
-//        $broj = Auth::user() -> id;
-//        echo $broj;
-//	die();
-
-//	$mails=Mail::all();  //valjda ovim šaljemo podatke iz baze u tabelu/formu za prikaz na ekranu
-//		$mails=Mail::paginate(8);
         $mails=Mail::where('user_id','=',Auth::user()->id)->paginate(8);
-        return view('admin.mailer')->with('mails', $mails);
+        return view('admin.pages.mail.mail')->with('mails', $mails);
     }
   
     public function store(Request $request)
@@ -48,7 +44,7 @@ class MailController extends AdminController
 
         $mail->save();
 	
-       	return redirect()->route('mailer.index');
+       	return redirect()->route('mail.index');
     }
 
    public function mailAction($data)

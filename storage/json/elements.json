@@ -38,7 +38,7 @@
         "id": 4,
         "label": "Email",
         "name": "email",
-        "type": "input",
+        "type": "email",
         "required": "yes",
         "unique": "yes",
         "sort": 4,

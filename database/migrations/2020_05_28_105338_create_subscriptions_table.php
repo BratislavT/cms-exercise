@@ -15,10 +15,14 @@ class CreateSubscriptionsTable extends Migration
     {
         Schema::create('subscriptions', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name', 60)->nullable();
-            $table->string('surname', 60)->nullable();
+            $table->string('gender');
+            $table->string('name', 60);
+            $table->string('surname', 60);
             $table->string('email', 100);
-            $table->string('gender')->nullable();
+            $table->string('country', 50);
+            $table->string('postcode', 20);
+            $table->string('city', 50);
+            $table->string('address', 100);
             $table->rememberToken();
             $table->timestamps();
         });

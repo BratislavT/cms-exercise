@@ -2,16 +2,17 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Admin\Map;
+use App\Models\Admin\Map;
 use Auth;
 
-class MapController extends AdminController
+class MapController extends Controller
 {
     public function index()
     {
 	$maps=Map::all()->sortByDesc('id')->first();
-	return view('admin.map')->with('maps', $maps);
+	return view('admin.pages.map.map')->with('maps', $maps);
     }
 
     public function store(Request $request)

@@ -3,10 +3,11 @@
 namespace App\Http\Controllers\Front;
 
 use Illuminate\Http\Request;
-use App\Subscription;
+use App\Http\Controllers\Controller;
+use App\Models\Front\Subscription;
 
 
-class SubscriptionController extends FrontController
+class SubscriptionController extends Controller
 {
     public function index(){
 
@@ -17,24 +18,33 @@ class SubscriptionController extends FrontController
 
         //echo "<pre>" . print_r($elementsArray, true) . "</pre>"; die();
 
-        return view('front.subscription')->with('elements', $elementsArray);
+        return view('front.pages.subscription.subscription')->with('elements', $elementsArray);
     }
 
     public function store(Request $request)
     {
         $subscription = new Subscription;
         $subscription->id = $request->id;
+        $subscription->gender = $request->gender;
         $subscription->name = $request->name; 
         $subscription->surname = $request->surname;
         $subscription->email = $request->email;
-        $subscription->gender = $request->gender;
-       
+        $subscription->country = $request->country;
+        $subscription->postcode = $request->postcode;
+        $subscription->city = $request->city;
+        $subscription->address = $request->address;
+        $subscription->save();
+
+        //return redirect()->route('subscription.index');
+
+        
         if($request->isMethod('post'))
         {
            
             $data = $request->all();
             // Check if Subscriber already exists
             $subscribersCount = Subscription::where('email', $data['email'])->count();
+            dd($subscribersCount);
 
             if($subscribersCount>0)        
             {
@@ -46,6 +56,7 @@ class SubscriptionController extends FrontController
                 return redirect()->back()->with('flash_message_success','You are now subscribed. Congratulations!');    
             }
         }
+        
 
     }
 

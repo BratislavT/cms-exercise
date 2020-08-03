@@ -19,7 +19,6 @@ Route::get('/', function () {
     } else {
         return redirect(app()->getLocale()); 
     }
-        
 });
 
 Route::group([
@@ -29,26 +28,25 @@ Route::group([
 ], function() {
     Route::get('/', function ($locale){
         session(['locale' => $locale]); // ovo se koristi za zadržavanje izabrane vrednosti u padajućem meniju
-        return view('front.index');
+        return view('front.pages.home.home');
     });
 });
 
-Route::resource('/subscription','Front\SubscriptionController');
-Route::any('/check-email','Front\SubscriptionController@checkEmail');
-
-
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
-
-Route::resource('/admin/mailer','Admin\MailController')->middleware('auth');
-
-Route::resource('/admin/map','Admin\MapController')->middleware('auth');
-
-Route::resource('/admin/subscription','Admin\SubscriptionFormController')->middleware('auth');
-
+// Admin
 Route::group(['middleware'=>['auth']],function(){
-    Route::get('/admin/dashboard','Admin\HomeController@dashboard');
+    Route::get('/admin/dashboard','Admin\DashboardController@dashboard')->name('dashboard');
+    Route::get('/admin/mail','Admin\MailController@index')->name('mail.index');
+    Route::post('/admin/mail','Admin\MailController@store')->name('mail.store');
+    Route::get('/admin/map','Admin\MapController@index')->name('map.index');
+    Route::post('/admin/map','Admin\MapController@store')->name('map.store');
+    Route::get('/admin/subscription','Admin\SubscriptionController@index')->name('subscription.index');;
+    Route::post('/admin/subscription','Admin\SubscriptionController@store')->name('subscription.store');
 });
 
+// Application
+Route::get('/subscription','Front\SubscriptionController@index');
+Route::post('/subscription','Front\SubscriptionController@store');
 
+// Error Pages
