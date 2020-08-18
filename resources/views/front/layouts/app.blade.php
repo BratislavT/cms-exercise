@@ -5,6 +5,7 @@
   @include('front.layouts.partials.head')
   <!-- Styles -->
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/carousel.css') }}" rel="stylesheet">
 </head>
 
 <body>

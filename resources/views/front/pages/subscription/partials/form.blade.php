@@ -66,6 +66,3 @@
         </div>
     </form>
 </div>
-
-
-<!-- <script src='js/my_script_front.js' type='text/javascript'></script> -->
