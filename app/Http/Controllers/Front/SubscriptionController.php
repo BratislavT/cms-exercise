@@ -23,6 +23,7 @@ class SubscriptionController extends Controller
 
     public function store(Request $request)
     {
+        /*
         $subscription = new Subscription;
         $subscription->id = $request->id;
         $subscription->gender = $request->gender;
@@ -34,10 +35,22 @@ class SubscriptionController extends Controller
         $subscription->city = $request->city;
         $subscription->address = $request->address;
         $subscription->save();
+        */
 
-        //return redirect()->route('subscription.index');
-
+        //This code is re-written above code, according to: https://laracasts.com/series/laravel-6-from-scratch
+        Subscription::create([
+            'id' => request('id'),
+            'gender' => request('gender'),
+            'name' => request('name'), 
+            'surname' => request('surname'),
+            'email' => request('email'),
+            'country' => request('country'),
+            'postcode' => request('postcode'),
+            'city' => request('city'),
+            'address' => request('address')   
+        ]);
         
+
         if($request->isMethod('post'))
         {
            

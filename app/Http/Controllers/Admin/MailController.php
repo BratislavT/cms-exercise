@@ -41,9 +41,8 @@ class MailController extends Controller
         $mail->subject = $request->subject;
         $mail->message = $request->message;
         $mail->status = $status;
-
         $mail->save();
-	
+        
        	return redirect()->route('mail.index');
     }
 
@@ -54,8 +53,8 @@ class MailController extends Controller
 
         $mail = new PHPMailer;
         $mail->IsSMTP();        //Sets Mailer to send message using SMTP
-	$mail->SMTPDebug = 2;
-	$mail->Host = 'smtp.gmail.com';  //Sets the SMTP hosts
+	    $mail->SMTPDebug = 2;
+	    $mail->Host = 'smtp.gmail.com';  //Sets the SMTP hosts
         $mail->Port = '587';        //Sets the default SMTP server port
         $mail->SMTPAuth = true;       //Sets SMTP authentication. Utilizes the Username and Password variables
         $mail->Username = 'bracabracatrajkovic@gmail.com';     //Sets SMTP username
