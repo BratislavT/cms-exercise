@@ -25,7 +25,7 @@
   
     </ul>
   
-    <a href="/subscription" class="btn btn-outline-success my-2 my-sm-0" role="button">Subscription</a>
+    <a href="{{ route('frontSubscription.index') }}" class="btn btn-outline-success my-2 my-sm-0" role="button">Subscription</a>
     
     <a href="" class="btn btn-outline-success my-2 my-sm-0" role="button">Log in</a>
   

@@ -41,12 +41,12 @@ Route::group(['middleware'=>['auth']],function(){
     Route::post('/admin/mail','Admin\MailController@store')->name('mail.store');
     Route::get('/admin/map','Admin\MapController@index')->name('map.index');
     Route::post('/admin/map','Admin\MapController@store')->name('map.store');
-    Route::get('/admin/subscription','Admin\SubscriptionController@index')->name('subscription.index');;
+    Route::get('/admin/subscription','Admin\SubscriptionController@index')->name('subscription.index');
     Route::post('/admin/subscription','Admin\SubscriptionController@store')->name('subscription.store');
 });
 
 // Application
-Route::get('/subscription','Front\SubscriptionController@index');
-Route::post('/subscription','Front\SubscriptionController@store');
+Route::get('/subscription','Front\SubscriptionController@index')->name('frontSubscription.index');
+Route::post('/subscription','Front\SubscriptionController@store')->name('frontSubscription.store');
 
 // Error Pages

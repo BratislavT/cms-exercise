@@ -13,16 +13,16 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="/admin/dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="{{ route('dashboard') }}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
 			            <li>
-			                <a href="/admin/mail"><i class="fa fa-envelope fa-fw"></i> Send Email</a>
+			                <a href="{{ route('mail.index') }}"><i class="fa fa-envelope fa-fw"></i> Send Email</a>
                         </li>
                         <li>
-			                <a href="/admin/map"><i class="fa fa-map fa-fw"></i> Map</a>
+			                <a href="{{ route('map.index') }}"><i class="fa fa-map fa-fw"></i> Map</a>
                         </li>
 		                <li>
-			                <a href="/admin/subscription"><i class="fa fa-pencil-square fa-fw"></i> Subscription Form</a>
+			                <a href="{{ route('subscription.index') }}"><i class="fa fa-pencil-square fa-fw"></i> Subscription Form</a>
                         </li>
 
                         <li>

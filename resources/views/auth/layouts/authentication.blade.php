@@ -31,7 +31,7 @@
 <!--			    <a class="navbar-brand" href="{{ url('/') }}">
                         {{ config('app.name', 'Laravel') }}
 		    </a>   -->
-                    <a class="navbar-brand" href="admin/dashboard">SB Admin v2.0</a>
+                    <a class="navbar-brand" href="{{ route('dashboard') }}">SB Admin v2.0</a>
                     
                 </div>
 
