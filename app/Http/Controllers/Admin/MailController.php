@@ -24,7 +24,7 @@ class MailController extends Controller
   
     public function store(Request $request)
     {
-
+        
      	$this->validate($request, [
              'recipient' => 'required|email',
              'subject'  => 'required',
@@ -58,7 +58,7 @@ class MailController extends Controller
         $mail->Port = '587';        //Sets the default SMTP server port
         $mail->SMTPAuth = true;       //Sets SMTP authentication. Utilizes the Username and Password variables
         $mail->Username = 'bracabracatrajkovic@gmail.com';     //Sets SMTP username
-        $mail->Password = 'bracabraca29x';     //Sets SMTP password
+        $mail->Password = 'bracabraca29x'; //Sets SMTP password; Nije viŠe ovaj password!
         $mail->SMTPSecure = 'tls';       //Sets connection prefix. Options are "", "ssl" or "tls"
         $mail->From = 'bracabracatrajkovic@gmail.com';
         $mail->FromName = 'Braca';

@@ -10,6 +10,4 @@
 
         </form>
     </div>
-   
-<script src='js/my_script.js' type='text/javascript'></script>
 

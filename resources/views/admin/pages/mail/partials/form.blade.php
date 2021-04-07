@@ -8,7 +8,12 @@
 
         <div class="form-group {{ $errors->has('recipient') ? 'has-error' : ''}}">
             <label for="recipient">Recipient</label>
-            <input type="text" name="recipient" class="form-control" placeholder="Enter Recipient Email"  />
+            <input 
+                class="form-control"
+                type="text"
+                name="recipient"
+                placeholder="Enter Recipient Email"
+                value="{{ old('recipient') }}">
             {!! $errors->first('recipient', '<p class="help-block">:message</p>') !!}
         </div>
 
