@@ -12,7 +12,7 @@ By Author [Bratislav Trajković](https://www.linkedin.com/in/bratislav-trajkovi%
 
   
 
-- [Home page](www.template.com) 
+- [Home page](www.template.com)
 
 - [GitHub](https://github.com/BratislavT/cms-exercise) 
 
