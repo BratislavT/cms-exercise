@@ -68,11 +68,11 @@ Subscription functionality not applied yet.
 
 - In order to access this page, you will need to login first.  
 
-- Run php artisan db:seed in your terminal. Use then these credentials to log in: email"=>"admin@template.com","password"=>"AdminTemplate"
+- Run php artisan db:seed in your terminal. Use then these credentials to log in: email: admin@template.com,password: AdminTemplate
 
 - After authentication, you will be redirected to the [Administration Home page](http://www.template.com/admin/dashboard).  
 
-You can also access this page, from the link [Dashboard](http://www.template.com/admin/dashboard) in the left sidebar.  
+  You can also access this page, from the link [Dashboard](http://www.template.com/admin/dashboard) in the left sidebar.  
 
 - On the left side bar, there are links to 2 more active pages: Send Email and Map   
 
