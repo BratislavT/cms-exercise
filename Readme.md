@@ -66,7 +66,9 @@ Subscription functionality not applied yet.
 
 - I have implemented [SB Admin 2](https://startbootstrap.com/theme/sb-admin-2) Bootstrap theme. 
 
-- In order to access this page, you will need to register/login first.  
+- In order to access this page, you will need to login first.  
+
+- Run php artisan db:seed in your terminal. Use then these credentials to log in: email"=>"admin@template.com","password"=>"AdminTemplate"
 
 - After authentication, you will be redirected to the [Administration Home page](http://www.template.com/admin/dashboard).  
 
