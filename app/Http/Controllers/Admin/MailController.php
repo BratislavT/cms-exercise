@@ -58,7 +58,7 @@ class MailController extends Controller
         $mail->Port = '587';        //Sets the default SMTP server port
         $mail->SMTPAuth = true;       //Sets SMTP authentication. Utilizes the Username and Password variables
         $mail->Username = 'youremail@gmail.com';     //Sets SMTP username
-        $mail->Password = 'yourpassword'; //Sets SMTP password;
+        $mail->Password = 'yourgmailpassword'; //Sets SMTP password;
         $mail->SMTPSecure = 'tls';       //Sets connection prefix. Options are "", "ssl" or "tls"
         $mail->From = 'youremail@gmail.com';
         $mail->FromName = 'yourname';
