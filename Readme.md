@@ -78,8 +78,9 @@ Subscription functionality not applied yet.
 - On the left side bar, there are links to 2 more active pages: Send Email and Map   
 
 - You can use [Send Email](http://www.template.com/admin/mail) page to send emails.  
+  Replace first, in MailController.php, youremail@gmail.com (2x), yourgmailpassword (1x) and yourname (1x), with your credentials.
 
-Below the Compose Emails section, you can see another section with the status of the emails (sent/not sent). 
+  Below the Compose Emails section, you can see another section with the status of the emails (sent/not sent). 
 
 - You can use [Map](http://www.template.com/admin/map) page to set the company name, address and Google maps location.   
 
