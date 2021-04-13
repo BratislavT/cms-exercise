@@ -15,20 +15,26 @@ class MapController extends Controller
 	return view('admin.pages.map.map')->with('maps', $maps);
     }
 
-    
+    //Done according to Laravel 6 From Scratch, lesson 27
     public function store()
     {
+	Map::create($this->validateMap());
 
-        Map::create(request()->validate([
-            'lat' => 'required',
-            'lng'  => 'required'
+        return redirect('/admin/map');
 
-        ]));
-
-        //return redirect()->route('map.index');
-        return redirect('/admin/map'); 
     }
-    
+
+    protected function validateMap()
+    {
+	return request()->validate([
+	    'name'    => 'required',
+            'address' => 'required',
+            'lat'     => 'required',
+	    'lng'     => 'required' 
+        ]);
+    }
+
+    // Done according to Laravel 5.x
     /**
     public function store(Request $request)
     {
