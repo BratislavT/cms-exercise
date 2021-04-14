@@ -24,7 +24,7 @@ By Author [Bratislav Trajković](https://www.linkedin.com/in/bratislav-trajkovi%
 
   
 
-I am learning Laravel (PHP) programming for some time, so I made CMS Exercise in order to continue learning programming in practice.  
+I am learning Laravel (PHP) programming for some time, so I started CMS Exercise in order to continue learning programming in practice.  
 
 CMS stands for [Content Management System](https://en.wikipedia.org/wiki/Content_management_system).  
 
