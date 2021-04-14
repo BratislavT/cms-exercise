@@ -2,7 +2,7 @@
 
   
 
-CMS Example  
+CMS Exercise 
 
 By Author [Bratislav Trajković](https://www.linkedin.com/in/bratislav-trajkovi%C4%87-77227520a/) 
 
@@ -24,7 +24,7 @@ By Author [Bratislav Trajković](https://www.linkedin.com/in/bratislav-trajkovi%
 
   
 
-I am learning Laravel (PHP) programming for some time, so I made CMS Example in order to continue learning programming in practice.  
+I am learning Laravel (PHP) programming for some time, so I made CMS Exercise in order to continue learning programming in practice.  
 
 CMS stands for [Content Management System](https://en.wikipedia.org/wiki/Content_management_system).  
 
@@ -90,4 +90,4 @@ Subscription functionality not applied yet.
 
   
 
-You are free to copy, modify, and distribute CMS Example with attribution under the terms of the [MIT license](https://opensource.org/licenses/MIT). 
+You are free to copy, modify, and distribute CMS Exercise with attribution under the terms of the [MIT license](https://opensource.org/licenses/MIT). 
