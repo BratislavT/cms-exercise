@@ -28,7 +28,7 @@ I am learning Laravel (PHP) programming for some time, so I made CMS Exercise in
 
 CMS stands for [Content Management System](https://en.wikipedia.org/wiki/Content_management_system).  
 
-If also in the learning phase, this example could help you with the similar project.   
+If also in the learning phase, this exercise could help you with the similar project.   
 
   
 
