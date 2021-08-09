@@ -4,7 +4,7 @@
 
 CMS Exercise 
 
-By Author [Bratislav Trajković](https://www.linkedin.com/in/bratislav-trajkovi%C4%87-77227520a/) 
+By Author [Bratislav Trajković](https://www.linkedin.com/in/bratislav-trajkovic) 
 
   
 
